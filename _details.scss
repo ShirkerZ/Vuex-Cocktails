@@ -1,0 +1,76 @@
+.details {
+    .details-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5rem;
+        .main-image{
+            height: 80vh;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: left;
+            padding: 4rem 0;
+            height: 80vh;
+            .links {
+                display: flex;
+                align-items: center;
+                p {
+                    margin-right: 1rem;
+                    font-size: 1rem;
+                }
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            .instructions {
+                margin: 2rem 0;
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    padding: 0;
+                    li {
+                        margin: 1rem 0;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .glass {
+                h2 {
+                    margin: 2rem 0;
+                }
+            }
+        }
+        .ingredients {
+            .ingredients-container {
+                width: 100%;
+                margin: 2rem 0;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 2rem 5rem;
+                justify-content: center;
+                .ingredient {
+                    width: 200px;
+                    h3{
+                        margin: 1rem 0;
+                    }
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        .other{
+            grid-column: 1/3;
+
+        }
+    }
+}

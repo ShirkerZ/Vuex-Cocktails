@@ -1,0 +1,84 @@
+.cocktails {
+    .cocktails-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+        grid-gap: 3rem;
+        .cocktail {
+            position: relative;
+            cursor: pointer;
+            img {
+                width: 20vw;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            h3 {
+                font-size: 1.5rem;
+                margin: 1rem 0;
+            }
+            &:hover .dark-background{
+                opacity: 1;
+            }
+            .dark-background{
+                position: absolute;
+                height: 20vw;
+                width: 20vw;
+                background: rgba(0, 0, 0, .5);
+                opacity: 0;
+                transition: opacity .5s ease-in-out;
+                h2{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    text-align: center;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                }
+            }
+            .skeleton-img{
+                width: 20vw;
+                height: 20vw;
+                background: rgb(199, 199, 199);
+            }
+            .skeleton-line{
+                margin-top: 1rem;
+                width: 15vw;
+                height: 3vh;
+                background: rgb(199, 199, 199);
+            }
+            .skeleton-enter-active, .skeleton-leave-active{
+                transition: opacity .5s;
+            }
+            .skeleton-enter, .skeleton-leave-to{
+                opacity: 0;
+            }
+            // .skeleton-img-item, .skeleton-line-item{
+            //     transition: opacity .5s;
+            // }
+            // .skeleton-img-enter,.skeleton-line-enter, .skeleton-img-leave-to, .skeleton-img-leave-to{
+            //     opacity: 0;
+            // }
+        }
+        .in_details:nth-child(n + 4),.load_less:nth-child(n+10) {
+            display: none;
+        }
+    }
+    .load-more {
+        height: 45px;
+        border: none;
+        outline: none;
+        background: black;
+        color: white;
+        font-size: 1rem;
+        padding: 0.5rem 4rem;
+        margin: 3rem 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    .button_in_details, .hide_button{
+        display: none;
+    }
+}
